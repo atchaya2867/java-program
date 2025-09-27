@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        int arr[] = new int[size];
+        int evenSum = 0, oddSum = 0;
+        for(int i=0; i<size; i++) {
+            arr[i]=scanner.nextInt();
+            if(arr[i]%2==0) {
+                evenSum=evenSum+arr[i];
+            }
+            else {
+                oddSum=oddSum-arr[i];
+            }
+        }
+        System.out.println((oddSum>evenSum)?oddSum+evenSum:evenSum-oddSum);
+    }
+}
