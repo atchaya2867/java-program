@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n<999) {
+            System.out.print("Invalid");
+        }
+        else {
+             int last = n%100;
+             int first = n;
+             while(first>99) {
+                 first = first /10;
+             }
+             System.out.print(last + first);
+        }
+    }
+}
