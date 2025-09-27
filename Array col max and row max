@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int rsize=sc.nextInt();
+        int csize=sc.nextInt();
+        int arr[][]=new int[rsize][csize];
+        for(int i=0;i<rsize;i++){
+            for(int j=0;j<csize;j++){
+                arr[i][j]=sc.nextInt();
+        }
+        }
+        int rmax=Integer.MIN_VALUE,cmax=Integer.MIN_VALUE;
+        int row,col;
+        for(int i=0;i<rsize;i++){
+            row=0;
+            col=0;
+            for(int j=0;j<csize;j++){
+             row=row+arr[i][j];
+             col=col+arr[j][i];
+              }
+              if(row>rmax){
+                  rmax=row;
+              }
+              if(col>cmax){
+                  cmax=col;
+              }
+        }
+    System.out.println(cmax+" "+rmax);
+}
+}
